@@ -1,0 +1,23 @@
+<div style="text-align:center ">
+  <h1> Magicpin Registration </h1>
+<div *ngIf="submit">
+  <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+    <input type="text" name="phoneNumber" placeholder="Enter Mobile Number" ngModel>
+    <br /><br>
+    <!-- <input type = "submit" style="background-color: red" value = "Send"> -->
+    <button type="button" class="btn btn-success" (click)="onSubmit(myform)">submit</button>
+    <!-- <button type="button" class="btn btn-success" (click)="apolo()">Apolo</button> -->
+    <!-- <button type="button" class="btn btn-success" (click)="vapolo()">Apolo</button> -->
+  </form>
+</div>
+  <div *ngIf="verifyv">
+    <form #myform1="ngForm" (ngSubmit)="verify(myform1)">
+      <input type="text" name="auth_otp" placeholder="Enter Otp" ngModel>
+      <br /><br>
+      <!-- <input type = "submit" style="background-color: red" value = "Send"> -->
+      <button type="button" class="btn btn-success" (click)="verify(myform1)">Verify</button>
+
+    </form>
+
+  </div>
+</div>
