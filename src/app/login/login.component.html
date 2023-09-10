@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+      <div class="card auth">
+        <div class="card-body auth-card">
+          <div class="auth-avatar">
+            <img src="https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png" alt="user" class="user-image">
+          </div>
+          <form  #loginform="ngForm" (submit)="login()">
+            <div class="form-group">
+              <label for="mobile">Mobile Number : </label>
+              <input type="text" name="mobile" class="form-control" placeholder="Enter Mobile Number" [(ngModel)]="userData.mobile">
+            </div>
+            <div class="form-group">
+              <label for="password">Password : </label>
+              <input type="password" name="password" class="form-control" placeholder="Enter password" [(ngModel)]="userData.password">
+              <div class="text-right forget-pass">
+                <!-- <a routerLink="/forget-password">Forget Password ?</a> -->
+              </div>
+            </div>
+            <div class="text-center">
+              <!-- <input type="submit" class="btn btn-my" value="Login"> -->
+              <button type="button" (click)="login()">Login</button>
+            </div>
+          </form>
+          <div style="color: blue;">{{message}}</div>
+          <div class="text-center sign-up" >
+            Don`t have an account ? <a routerLink="/sign-up" style="cursor: pointer;">Sign Up</a> hera.
+
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>

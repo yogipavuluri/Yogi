@@ -1,23 +1,75 @@
-<div style="text-align:center ">
-  <h1> Magicpin Registration </h1>
-<div *ngIf="submit">
-  <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
-    <input type="text" name="phoneNumber" placeholder="Enter Mobile Number" ngModel>
-    <br /><br>
-    <!-- <input type = "submit" style="background-color: red" value = "Send"> -->
-    <button type="button" class="btn btn-success" (click)="onSubmit(myform)">submit</button>
-    <!-- <button type="button" class="btn btn-success" (click)="apolo()">Apolo</button> -->
-    <!-- <button type="button" class="btn btn-success" (click)="vapolo()">Apolo</button> -->
-  </form>
-</div>
-  <div *ngIf="verifyv">
-    <form #myform1="ngForm" (ngSubmit)="verify(myform1)">
-      <input type="text" name="auth_otp" placeholder="Enter Otp" ngModel>
-      <br /><br>
-      <!-- <input type = "submit" style="background-color: red" value = "Send"> -->
-      <button type="button" class="btn btn-success" (click)="verify(myform1)">Verify</button>
+<!-- <div class="row" style="margin-top: 20%;">
+  <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+    <div class="card auth">
+      <div class="card-body auth-card" >
+        <div class="auth-avatar">
+          <img style="width: 20px;height: 20px;"
+            src="https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png"
+            alt="user" class="user-image">
+        </div>
+        <form #gfgform="ngForm">
+          <div class="form-group">
+            <label for="email">Enter Number : </label>
+            <input id="name" name="name" type="text" class="form-control" required [(ngModel)]="user.name" />
+          </div>
 
-    </form>
+          <div class="text-center">
+            <button type="button" (click)="submit()">Submit</button>
 
+          </div>
+        </form>
+        <form #gfgform1="ngForm">
+          <div class="form-group">
+            <label for="email">Enter Number : </label>
+            <input id="name" name="name" type="text" class="form-control" required [(ngModel)]="user.number" />
+          </div>
+
+          <div class="text-center">
+            <button type="button" (click)="verify(user)">Submit</button>
+
+          </div>
+        </form>
+       
+
+
+      </div>
+    </div>
   </div>
+</div> -->
+
+
+<!-- <table  class="table table-striped" style="margin: 10px 0px 10px 10px;">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Date</th>
+      <th scope="col">Proof</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let a of final let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{a.name}}</td>
+      <td>{{a.amount}}</td>
+      <td>{{a.Date}}</td>
+      <td>{{a.proof == true ? 'Yes':'No'}}</td>
+    </tr>
+    <tr style="color: red;">
+     <td></td>
+     <td>Total</td>
+     <td style="color: red;">{{sum}}</td>
+     <td></td>
+    </tr>
+
+  </tbody>
+</table> -->
+
+<div class="container-fluid">
+  <br />
+  <!-- <a [routerLink]="['/login']" class="btn btn-primary">Login</a> &nbsp;
+  <a [routerLink]="['/sign-up']" class="btn btn-primary">Sign Up</a> -->
+  <br />
+  <router-outlet></router-outlet>
 </div>

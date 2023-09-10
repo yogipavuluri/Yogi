@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "yogi-3c12d"
+  },
+"targets": {
+    "yogi-3c12d": {
+      "hosting": {
+        "loan": [
+          "yogi-3c12d"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "hosting": [
+    {
+      "public": "dist/magicpin",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "loan",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
